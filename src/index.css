@@ -17,6 +17,21 @@ body {
   justify-content: center;
 }
 
+button {
+  font-family:
+    Hanken Grotesk,
+    Arial,
+    sans-serif;
+    font-weight: 600;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* #endregion Global styles*/
 
 /* #region Header */
@@ -125,5 +140,48 @@ main {
 }
 
 /* #endregion Word */
+
+/* #region Keyboard*/
+
+.keyboard {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2rem 0;
+    max-width: 480px;
+}
+
+.keys {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125rem;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    background-color: #FCBA29;
+    
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/* #endregion Keyboard*/
+
+.newGame {
+  width: 228px;
+  height: 40px;
+  border: 1px solid #D7D7D7;
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+
+  background-color: #11B5E5;
+
+  font-size: 16px;
+}
 
 /* #endregion Main */

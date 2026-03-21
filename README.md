@@ -90,7 +90,7 @@ Open your browser at `http://localhost:5173`.
 - [x] Status Section
 - [x] Language List
 - [x] Word Display
-- [] Keyboard
+- [x] Keyboard
 - [] Save the guessed letters
 - [] Keyboard letter styles for guesses
 - [] Only display correctly guessed letters in word
