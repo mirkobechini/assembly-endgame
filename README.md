@@ -36,6 +36,7 @@ The goal of the game is to find the correct word before running out of attempts.
 - **Vite**: Build tool
 - **Figma**: Design
 - **Nanoid**: Unique ID generation
+- **clsx**: Conditional class names
 
 ---
 
@@ -91,8 +92,8 @@ Open your browser at `http://localhost:5173`.
 - [x] Language List
 - [x] Word Display
 - [x] Keyboard
-- [] Save the guessed letters
-- [] Keyboard letter styles for guesses
+- [x] Save the guessed letters
+- [x] Keyboard letter styles for guesses
 - [] Only display correctly guessed letters in word
 - [] Wrong guess count
 - [] Lost languages

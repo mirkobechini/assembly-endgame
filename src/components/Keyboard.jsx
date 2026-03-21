@@ -1,10 +1,23 @@
-export default function Keyboard({ letters }) {
+import { clsx } from 'clsx';
+
+export default function Keyboard({ letters, addGuessedLetters, guessedLetters, word }) {
 
     return (
         <section className="keyboard">
             {
-                letters.map(letter =>
-                    <button className="keys" key={letter} aria-label={`This is letter ${letter}`}>{letter}</button>)
+                letters.map(letter => {
+                    const isGuessed = guessedLetters.includes(letter);
+                    const isInWord = word.includes(letter);
+                    return (
+
+                        <button onClick={() => addGuessedLetters(letter)}
+                            className={clsx({
+                                right: isGuessed && isInWord,
+                                wrong: isGuessed && !isInWord,
+                                keys: true
+                            })}
+                            key={letter} aria-label={`This is letter ${letter}`}>{letter}</button>)
+                })
             }
         </section>
     )
