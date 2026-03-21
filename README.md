@@ -94,9 +94,9 @@ Open your browser at `http://localhost:5173`.
 - [x] Keyboard
 - [x] Save the guessed letters
 - [x] Keyboard letter styles for guesses
-- [] Only display correctly guessed letters in word
-- [] Wrong guess count
-- [] Lost languages
+- [x] Only display correctly guessed letters in word
+- [x] Wrong guess count
+- [x] Lost languages
 - [] isGameOver
 - [] Display won/lost status
 - [] Quick CSS alignment fix

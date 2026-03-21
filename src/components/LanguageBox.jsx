@@ -1,14 +1,14 @@
-import {languages} from "../data/languages"
+import { languages } from "../data/languages"
 
-export default function LanguageBox(){
-    return(
+export default function LanguageBox({wrongGuessCount}) {
+    return (
         <div className="languageBox">
             {
-                    languages.map(lang => (
-                        <span key={lang.name} className="badge" 
-                        style={{backgroundColor: lang.backgroundColor, color: lang.color}}>{lang.name}</span>
-                    ))
-                }
+                languages.map((lang, index) => (
+                    <span key={lang.name} className={`badge ${(wrongGuessCount > index) ? "lost" : ""}`}
+                        style={{ backgroundColor: lang.backgroundColor, color: lang.color }}>{lang.name}</span>
+                ))
+            }
         </div>
     )
 }

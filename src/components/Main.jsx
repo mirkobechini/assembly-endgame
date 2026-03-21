@@ -6,12 +6,16 @@ import Keyboard from "./Keyboard"
 
 export default function Main() {
 
-
+    //State variables
     const [word, setWord] = useState("react".split(""))
+    const [guessedLetters, setGuessedLetters] = useState([])
 
+    //Derived variables
+    const wrongGuessCount = guessedLetters.filter(letter => !word.includes(letter)).length
+
+    //Static variables
     const letters = "abcdefghijklmnopqrstuvwxyz".split("")
 
-    const [guessedLetters, setGuessedLetters] = useState([])
 
     function addGuessedLetters(letter) {
         setGuessedLetters(prevGuessed => {
@@ -23,8 +27,8 @@ export default function Main() {
 
     return (
         <main>
-            <LanguageBox />
-            <Word word={word} />
+            <LanguageBox wrongGuessCount = {wrongGuessCount}/>
+            <Word word={word} guessedLetters={guessedLetters} />
             <Keyboard letters={letters} addGuessedLetters={addGuessedLetters} guessedLetters={guessedLetters} word={word} />
             <button className="newGame" aria-label="Start new game">New Game</button>
         </main>
