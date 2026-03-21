@@ -35,6 +35,7 @@ The goal of the game is to find the correct word before running out of attempts.
 - **CSS**: Styling
 - **Vite**: Build tool
 - **Figma**: Design
+- **Nanoid**: Unique ID generation
 
 ---
 
@@ -88,7 +89,7 @@ Open your browser at `http://localhost:5173`.
 - [x] Header Section
 - [x] Status Section
 - [x] Language List
-- [] Word Display
+- [x] Word Display
 - [] Keyboard
 - [] Save the guessed letters
 - [] Keyboard letter styles for guesses

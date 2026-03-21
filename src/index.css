@@ -5,7 +5,10 @@
 
 body {
   margin: 0 auto;
-  font-family: Hanken Grotesk, Arial, sans-serif;
+  font-family:
+    Hanken Grotesk,
+    Arial,
+    sans-serif;
   background-color: #262626;
   color: #d9d9d9;
   padding: 20px;
@@ -27,9 +30,8 @@ header {
 header > h1 {
   font-weight: 500;
   font-size: 1.25rem;
-  
-  color: #F9F4DA;
 
+  color: #f9f4da;
 }
 
 header > p {
@@ -38,19 +40,17 @@ header > p {
   color: #8e8e8e;
 }
 
-
 /* #region Status */
 
 .status-section {
-  background-color: #10A95B;
-  color: #F9F4DA;
-  
+  background-color: #10a95b;
+  color: #f9f4da;
+
   text-align: center;
 
   padding: 0.25rem;
   border-radius: 5px;
   margin-block: 30px;
-
 }
 
 .status-section > h2 {
@@ -58,7 +58,6 @@ header > p {
   font-weight: 500;
   margin: 0;
   padding: 0.25rem 0;
-
 }
 
 .status-section > p {
@@ -77,7 +76,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 /* #region LanguageBox */
@@ -98,5 +96,34 @@ main {
 }
 
 /* #endregion LanguageBox */
+
+/* #region Word */
+
+.word {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  gap: 0.15rem;
+}
+
+
+.letter {
+  border-bottom: 1px solid #f9f4da;
+  background-color: #323232;
+  width: 40px;
+  height: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+/* #endregion Word */
 
 /* #endregion Main */
