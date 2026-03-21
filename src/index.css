@@ -4,7 +4,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: Hanken Grotesk, Arial, sans-serif;
   background-color: #262626;
   color: #d9d9d9;
@@ -13,6 +13,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 /* #endregion Global styles*/
 
 /* #region Header */
@@ -20,24 +21,23 @@ body {
 header {
   text-align: center;
   line-height: 100%;
+  max-width: 350px;
 }
 
 header > h1 {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25rem;
   
   color: #F9F4DA;
 
 }
 
 header > p {
-  font-size: 14px;
+  font-size: 0.875rem;
 
-  max-width: 350px;
   color: #8e8e8e;
 }
 
-/* #endregion Header */
 
 /* #region Status */
 
@@ -47,29 +47,56 @@ header > p {
   
   text-align: center;
 
-
-  max-height: 350px;
+  padding: 0.25rem;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-block: 30px
+  margin-block: 30px;
 
 }
 
 .status-section > h2 {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   margin: 0;
-  padding-top: 0.25rem;
+  padding: 0.25rem 0;
 
 }
 
 .status-section > p {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin: 0;
-  max-width: 350px;
-  padding-bottom: 0.25rem;
+  padding: 0.25rem 0;
 }
 
 /* #endregion Status */
+
+/* #endregion Header */
+
+/* #region Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+/* #region LanguageBox */
+
+.languageBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.15rem;
+  max-width: 266px;
+}
+
+.badge {
+  border-radius: 3px;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+}
+
+/* #endregion LanguageBox */
+
+/* #endregion Main */

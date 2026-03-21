@@ -5,7 +5,7 @@ export default function LanguageBox(){
         <div className="languageBox">
             {
                     languages.map(lang => (
-                        <span className="badge" 
+                        <span key={lang.name} className="badge" 
                         style={{backgroundColor: lang.backgroundColor, color: lang.color}}>{lang.name}</span>
                     ))
                 }

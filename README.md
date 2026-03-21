@@ -87,7 +87,7 @@ Open your browser at `http://localhost:5173`.
 
 - [x] Header Section
 - [x] Status Section
-- [] Language List
+- [x] Language List
 - [] Word Display
 - [] Keyboard
 - [] Save the guessed letters
