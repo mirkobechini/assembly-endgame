@@ -97,8 +97,8 @@ Open your browser at `http://localhost:5173`.
 - [x] Only display correctly guessed letters in word
 - [x] Wrong guess count
 - [x] Lost languages
-- [] isGameOver
-- [] Display won/lost status
+- [x] isGameOver
+- [x] Display won/lost status
 - [] Quick CSS alignment fix
 - [] Conditional rendering with a helper function
 - [] Backlog inventory

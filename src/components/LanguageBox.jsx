@@ -1,6 +1,6 @@
-import { languages } from "../data/languages"
 
-export default function LanguageBox({wrongGuessCount}) {
+
+export default function LanguageBox({wrongGuessCount, languages}) {
     return (
         <div className="languageBox">
             {
