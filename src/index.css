@@ -4,7 +4,7 @@
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   font-family:
     Hanken Grotesk,
     Arial,
@@ -72,7 +72,6 @@ main {
 /* #region Status */
 
 .status-section {
-  background-color: transparent;
   color: #f9f4da;
   max-width: 350px;
   width: 100%;
@@ -88,6 +87,17 @@ main {
   border-radius: 5px;
   margin-block: 30px;
 }
+
+
+.status-section.won {
+  background-color: #10A95B;
+}
+
+.status-section.lost {
+  background-color: #BA2A2A;
+}
+
+
 
 .status-section > h2 {
   font-size: 1.25rem;
@@ -184,15 +194,13 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.125rem;
+  font-size: 1rem;
   border: 1px solid #d7d7d7;
   border-radius: 4px;
-  cursor: pointer;
 
   background-color: #fcba29;
 
   text-transform: uppercase;
-  font-size: 16px;
 }
 
 .right {
@@ -214,7 +222,7 @@ main {
 
   background-color: #11b5e5;
 
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* #endregion Main */
