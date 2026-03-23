@@ -99,10 +99,9 @@ Open your browser at `http://localhost:5173`.
 - [x] Lost languages
 - [x] isGameOver
 - [x] Display won/lost status
-- [] Conditional rendering with a helper function
-- [] Backlog inventory
-- [] Farewell messages
-- [] Disable keyboard when game is over
+- [x] Conditional rendering with a helper function
+- [x] Farewell messages
+- [X] Disable keyboard when game is over
 - [] Make the game more a11y-firendly
 - [] Choose random word
 - [] New game button resets the game

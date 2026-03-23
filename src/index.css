@@ -56,8 +56,6 @@ header > p {
   color: #8e8e8e;
 }
 
-
-
 /* #endregion Header */
 
 /* #region Main */
@@ -67,7 +65,6 @@ main {
   flex-direction: column;
   align-items: center;
 }
-
 
 /* #region Status */
 
@@ -88,16 +85,20 @@ main {
   margin-block: 30px;
 }
 
-
-.status-section.won {
-  background-color: #10A95B;
+.status-section.won-status {
+  background-color: #10a95b;
 }
 
-.status-section.lost {
-  background-color: #BA2A2A;
+.status-section.lost-status {
+  background-color: #ba2a2a;
 }
 
-
+.status-section.farewell-status {
+  background-color: #7a5ea7;
+  border: 1px dashed #323232;
+  font-style: italic;
+  font-weight: 400;
+}
 
 .status-section > h2 {
   font-size: 1.25rem;
@@ -110,9 +111,8 @@ main {
   margin: 0;
 }
 
+
 /* #endregion Status */
-
-
 
 /* #region LanguageBox */
 
@@ -133,17 +133,17 @@ main {
 }
 
 .lost::before {
-    content: "💀";
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    font-size: 0.85rem;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* #endregion LanguageBox */

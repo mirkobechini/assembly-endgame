@@ -17,10 +17,11 @@ export default function Main() {
     const isGameWon = (word.every(letter => guessedLetters.includes(letter)))
     const isGameLost = (wrongGuessCount >= languages.length - 1)
     const isGameOver = isGameWon || isGameLost
+    const lastGuessedLetter = guessedLetters[guessedLetters.length - 1]
+    const isLastGuessWrong = lastGuessedLetter && !word.includes(lastGuessedLetter)
 
     //Static variables
     const letters = "abcdefghijklmnopqrstuvwxyz".split("")
-
 
 
     function addGuessedLetters(letter) {
@@ -33,10 +34,11 @@ export default function Main() {
 
     return (
         <main>
-            <Status isGameWon={isGameWon} isGameLost={isGameLost} isGameOver={isGameOver} />
+            <Status isGameWon={isGameWon} isGameLost={isGameLost} isGameOver={isGameOver}
+             isLastGuessWrong={isLastGuessWrong} languageLost={languages[wrongGuessCount-1]?.name} />
             <LanguageBox wrongGuessCount={wrongGuessCount} languages={languages} />
             <Word word={word} guessedLetters={guessedLetters} />
-            <Keyboard letters={letters} addGuessedLetters={addGuessedLetters} guessedLetters={guessedLetters} word={word} />
+            <Keyboard letters={letters} addGuessedLetters={addGuessedLetters} guessedLetters={guessedLetters} word={word} isGameOver={isGameOver} />
             {isGameOver &&
                 <button className="newGame" aria-label="Start new game">New Game</button>
             }
