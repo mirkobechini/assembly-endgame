@@ -102,7 +102,7 @@ Open your browser at `http://localhost:5173`.
 - [x] Conditional rendering with a helper function
 - [x] Farewell messages
 - [X] Disable keyboard when game is over
-- [] Make the game more a11y-firendly
+- [x] Make the game more a11y-firendly
 - [] Choose random word
 - [] New game button resets the game
 - [] Display missed letters when lost

@@ -36,7 +36,7 @@ export default function Status({ isGameOver, isGameWon, isGameLost, isLastGuessW
     }
 
     return (
-        <section className={gameStatusClasses}>
+        <section aria-live="polite" role="status" className={gameStatusClasses}>
             {renderGameStatus()}
         </section>
     )

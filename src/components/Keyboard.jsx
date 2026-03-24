@@ -16,7 +16,8 @@ export default function Keyboard({ letters, addGuessedLetters, guessedLetters, w
                                 wrong: isGuessed && !isInWord,
                                 keys: true
                             })}
-                            key={letter} aria-label={`This is letter ${letter}`} disabled={isGameOver} >{letter}</button>)
+                            key={letter} aria-label={`This is letter ${letter}`} disabled={isGameOver} 
+                            aria-disabled={guessedLetters.includes(letter)}>{letter}</button>)
                 })
             }
         </section>
