@@ -4,16 +4,17 @@ import LanguageBox from "./LanguageBox"
 import Word from "./Word"
 import Keyboard from "./Keyboard"
 import { languages } from "../data/languages"
-
+import { getRandomWord } from "../data/utils"
+import Confetti from "react-confetti"
 
 export default function Main() {
 
     //State variables
-    const [word, setWord] = useState("react".split(""))
+    const [word, setWord] = useState(() => getRandomWord().split(""))
     const [guessedLetters, setGuessedLetters] = useState([])
 
     //Derived variables
-    const numGuessesLeft = languages.length - 1 
+    const numGuessesLeft = languages.length - 1
     const wrongGuessCount = guessedLetters.filter(letter => !word.includes(letter)).length
     const isGameWon = (word.every(letter => guessedLetters.includes(letter)))
     const isGameLost = (wrongGuessCount >= numGuessesLeft)
@@ -25,6 +26,11 @@ export default function Main() {
     const letters = "abcdefghijklmnopqrstuvwxyz".split("")
 
 
+    function handleNewGame() {
+        setGuessedLetters([])
+        setWord(getRandomWord().split(""))
+    }
+
     function addGuessedLetters(letter) {
         setGuessedLetters(prevGuessed => {
             const guessedSet = new Set(prevGuessed)
@@ -35,13 +41,19 @@ export default function Main() {
 
     return (
         <main>
+            {isGameWon &&
+                <Confetti
+                    recycle={false}
+                    numberOfPieces={1000}
+                />
+            }
             <Status isGameWon={isGameWon} isGameLost={isGameLost} isGameOver={isGameOver}
-             isLastGuessWrong={isLastGuessWrong} languageLost={languages[wrongGuessCount-1]?.name} />
+                isLastGuessWrong={isLastGuessWrong} languageLost={languages[wrongGuessCount - 1]?.name} />
             <LanguageBox wrongGuessCount={wrongGuessCount} languages={languages} />
-            <Word word={word} guessedLetters={guessedLetters} lastGuessedLetter={lastGuessedLetter} numGuessesLeft={numGuessesLeft} />
+            <Word word={word} guessedLetters={guessedLetters} lastGuessedLetter={lastGuessedLetter} numGuessesLeft={numGuessesLeft} isGameLost={isGameLost} />
             <Keyboard letters={letters} addGuessedLetters={addGuessedLetters} guessedLetters={guessedLetters} word={word} isGameOver={isGameOver} />
             {isGameOver &&
-                <button className="newGame" aria-label="Start new game">New Game</button>
+                <button className="newGame" onClick={handleNewGame} aria-label="Start new game">New Game</button>
             }
         </main>
     )

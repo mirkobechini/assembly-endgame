@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 
-export default function Keyboard({ letters, addGuessedLetters, guessedLetters, word }) {
+export default function Keyboard({ letters, addGuessedLetters, guessedLetters, word, isGameOver }) {
 
     return (
         <section className="keyboard">

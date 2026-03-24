@@ -174,6 +174,10 @@ main {
   font-weight: 700;
 }
 
+.not-guessed{
+  color: #EC5D49;
+}
+
 /* #endregion Word */
 
 /* #region Keyboard*/

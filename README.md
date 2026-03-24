@@ -37,6 +37,7 @@ The goal of the game is to find the correct word before running out of attempts.
 - **Figma**: Design
 - **Nanoid**: Unique ID generation
 - **clsx**: Conditional class names
+- **react-confetti**: Confetti animation
 
 ---
 
@@ -103,9 +104,9 @@ Open your browser at `http://localhost:5173`.
 - [x] Farewell messages
 - [X] Disable keyboard when game is over
 - [x] Make the game more a11y-firendly
-- [] Choose random word
-- [] New game button resets the game
-- [] Display missed letters when lost
+- [x] Choose random word
+- [x] New game button resets the game
+- [x] Display missed letters when lost
 - [] Deploy
 
 ---

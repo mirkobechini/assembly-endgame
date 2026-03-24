@@ -13,10 +13,10 @@ export default function Status({ isGameOver, isGameWon, isGameLost, isLastGuessW
         }
     )
 
-    function renderGameStatus(){
+    function renderGameStatus() {
         if (!isGameOver && isLastGuessWrong)
-             return <p>{getFarewellText(languageLost)}</p>;
-        if(isGameWon) {
+            return <p>{getFarewellText(languageLost)}</p>;
+        if (isGameWon) {
             return (
                 <>
                     <h2>You win!</h2>
@@ -24,7 +24,7 @@ export default function Status({ isGameOver, isGameWon, isGameLost, isLastGuessW
                 </>
             )
         }
-        if(isGameLost) {
+        if (isGameLost) {
             return (
                 <>
                     <h2>Game over!</h2>
