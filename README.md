@@ -25,7 +25,7 @@ The goal of the game is to find the correct word before running out of attempts.
 
 ## 🌍 Demo
 
-- Live: https://mirkobechini.github.io/assembly-endgame/ <!-- Not deployed yet -->
+- Live: https://mirkobechini.github.io/assembly-endgame/
 
 ---
 
