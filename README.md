@@ -107,7 +107,7 @@ Open your browser at `http://localhost:5173`.
 - [x] Choose random word
 - [x] New game button resets the game
 - [x] Display missed letters when lost
-- [] Deploy
+- [x] Deploy
 
 ---
 

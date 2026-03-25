@@ -41,12 +41,7 @@ export default function Main() {
 
     return (
         <main>
-            {isGameWon &&
-                <Confetti
-                    recycle={false}
-                    numberOfPieces={1000}
-                />
-            }
+            {isGameWon && <Confetti/>}
             <Status isGameWon={isGameWon} isGameLost={isGameLost} isGameOver={isGameOver}
                 isLastGuessWrong={isLastGuessWrong} languageLost={languages[wrongGuessCount - 1]?.name} />
             <LanguageBox wrongGuessCount={wrongGuessCount} languages={languages} />
